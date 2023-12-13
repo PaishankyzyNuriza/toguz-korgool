@@ -3,6 +3,8 @@
 
 Welcome to Toguz Korgool, a captivating implementation of the traditional Central Asian game that combines strategy and skill.This project, done by Nuriza Paishan kyzy for the final frontend, allows you to immerse yourself in the world of Toguz Korgool and experience the thrill of the game right from your browser. 
 
+> [Deployed App](http://toguz-korgool.mygamesonline.org/)
+
 ## Table of Contents
 
 - [About the Game](#about-the-game)
