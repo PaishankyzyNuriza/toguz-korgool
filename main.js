@@ -2,8 +2,8 @@ function defineWinner(team) {
   const text = modal.querySelector("span");
   modal.classList.add("active");
 
-  if (team === "first") text.innerText = "The first team has winned!";
-  else if (team === "second") text.innerText = "The second team has winned!";
+  if (team === "first") text.innerText = "The first team has winned! Congratulations!";
+  else if (team === "second") text.innerText = "The second team has winned! Congratulations!";
 }
 
 function defineTurnAndCellsEmptiness(isChangeTurn = true) {
