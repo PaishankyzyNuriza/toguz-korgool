@@ -25,7 +25,7 @@ Toguz Korgool, also known as Toguz Kumalak, is a traditional mancala game played
 
 ## How to Play
 
-Toguz Korgool is played with a wooden board and 81 stones, with nine holes on each side. The objective is to capture as many stones as possible. For detailed instructions on how to play, check out our [official guide](link-to-game-guide).
+Toguz Korgool is played with a wooden board and 81 stones, with nine holes on each side. The objective is to capture as many stones as possible. For detailed instructions on how to play, check out our [official guide](https://ru.sputnik.kg/20230831/toguz-korgool-igra-pravila-1077824986.html?ysclid=lq480hjp1683280351).
 
 ## Installation
 
