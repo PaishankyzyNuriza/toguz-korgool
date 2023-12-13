@@ -1,0 +1,185 @@
+.logo1{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 200px;
+  padding-bottom: 100px;
+}
+.logo{
+  width: 300px; /* Adjust the width as needed */
+  height: auto;
+}
+.game {
+  position: relative;
+  border-radius: var(--round);
+  width: 100%;
+  max-width: 750px;
+  /* max-width: calc((100vh - 40px) / 2); */
+  height: 100%;
+  max-height: 830px;
+  display: flex;
+  overflow: hidden;
+}
+.desk {
+  flex: 0 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.desk,
+.center-block {
+  padding: 20px 30px;
+}
+.desk.first {
+  background-color: var(--first-color);
+}
+.desk.second {
+  background-color: var(--second-color);
+}
+.center {
+  flex: 0 1 150px;
+  display: flex;
+  flex-direction: column;
+}
+.center-block {
+  flex: 0 0 50%;
+  max-height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.center-block.first {
+  background-color: var(--first-color);
+}
+.center-block.second {
+  background-color: var(--second-color);
+}
+.cell {
+  position: relative;
+  border-radius: var(--round-two);
+  padding: 20px;
+  gap: 5px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: inset 0 0px 20px black;
+}
+.first .cell {
+  flex-direction: row-reverse;
+}
+.trump__block {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0px 15px black;
+}
+.bill {
+  position: relative;
+  border-radius: var(--round-two);
+  padding: 10px;
+  width: 100%;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  box-shadow: inset 0 0px 15px black;
+}
+.bill .count {
+  position: absolute;
+  font-weight: bold;
+  font-size: 32px;
+  width: 17px;
+}
+.first .bill .count {
+  /* top: calc(50% - 32px);  */
+  left: -19px;
+  transform: rotate(-90deg);
+}
+.second .bill .count {
+  /* bottom: calc(50% - 32px); */
+  right: -19px;
+  transform: rotate(90deg);
+}
+.figure {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(31, 31, 190);
+  pointer-events: none;
+}
+.figure.trump {
+  background-color: rgb(109, 64, 6);
+}
+.cell.active:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.cell.active:active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.number {
+  position: absolute;
+  font-size: 32px;
+  pointer-events: none;
+}
+.first .number {
+  left: -25px;
+  transform: rotate(-90deg);
+}
+.second .number {
+  right: -25px;
+  transform: rotate(90deg);
+}
+.move__figure {
+  position: absolute;
+  top: 120px;
+  left: 40%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  transition: 0.2s ease-in all;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .game {
+    border-radius: 0;
+  }
+  .desk.first {
+    padding: 20px 0 20px 30px;
+  }
+  .desk.second {
+    padding: 20px 30px 20px 0;
+  }
+  .cell {
+    padding: 5px;
+    column-gap: 3px;
+    row-gap: 2px;
+  }
+  .desk.first .cell {
+    border-radius: var(--round-two) 0 0 var(--round-two);
+  }
+  .desk.second .cell {
+    border-radius: 0 var(--round-two) var(--round-two) 0;
+  }
+  .figure:not(.move__figure) {
+    width: 8px;
+    height: 8px;
+  }
+  .number {
+    font-size: 24px;
+  }
+}

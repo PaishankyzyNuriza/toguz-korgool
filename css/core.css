@@ -1,0 +1,72 @@
+:root {
+  --first-color: #f0b474;
+  --second-color: rgb(220, 73, 174);
+  --round: 10px;
+  --round-two: 20px;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s;
+  font-family: monospace;
+}
+button:disabled {
+  cursor: auto;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  padding: 40px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+.modal.active {
+  pointer-events: all;
+  opacity: 1;
+}
+.modal .content {
+  border-radius: var(--round);
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(62, 61, 61);
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0;
+  }
+}
